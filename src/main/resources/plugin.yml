@@ -1,0 +1,4 @@
+name: UCRacing1
+version: '${project.version}'
+main: UC.urbancraft.ucracing1.UCRacing1
+api-version: '1.21'
