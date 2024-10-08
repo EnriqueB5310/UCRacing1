@@ -1,6 +1,8 @@
 package UC.urbancraft.ucracing1.comands;
 
+import UC.urbancraft.ucracing1.Race;
 import UC.urbancraft.ucracing1.RaceManager;
+import UC.urbancraft.ucracing1.RaceSession;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

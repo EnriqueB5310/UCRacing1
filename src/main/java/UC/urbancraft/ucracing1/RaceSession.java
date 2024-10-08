@@ -2,7 +2,6 @@ package UC.urbancraft.ucracing1;
 
 import UC.urbancraft.ucracing1.Util.RaceCheckpoint;
 import UC.urbancraft.ucracing1.Util.RaceStartPoints;
-import jdk.internal.foreign.SystemLookup;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -41,14 +40,14 @@ public class RaceSession {
         isRunning = true;
 
         // Teleport players to the spawn location or start points
-        teleportPlayersToStart();
+        teleportPlayersToStart(player);
 
         // Start the countdown
         startCountdown();
     }
 
     // Teleport all players to start points
-    private void teleportPlayersToStart() {
+    public void teleportPlayersToStart(Player player) {
         List<RaceStartPoints> startPoints = race.getStartPoints();
         for (int i = 0; i < participants.size(); i++) {
             Player player = participants.get(i);
@@ -62,7 +61,7 @@ public class RaceSession {
     }
 
     // Start a countdown before race begins
-    private void startCountdown() {
+    public void startCountdown() {
         Plugin MyPlugin = this.Plugin;
         new BukkitRunnable() {
             int countdown = 5; // Countdown from 5 seconds
@@ -157,5 +156,8 @@ public class RaceSession {
 
         // Clean up session
         isRunning = false;
+    }
+
+    public boolean isParticipant(Player player) {
     }
 }

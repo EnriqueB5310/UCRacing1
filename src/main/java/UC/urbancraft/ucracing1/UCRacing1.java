@@ -1,5 +1,6 @@
 package UC.urbancraft.ucracing1;
 
+import UC.urbancraft.ucracing1.listeners.RaceCheckpointListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class UCRacing1 extends JavaPlugin {
@@ -9,7 +10,7 @@ public final class UCRacing1 extends JavaPlugin {
     @Override
     public void onEnable() {
       this.raceManager = new RaceManager();
-    this.comm
+    getServer().getPluginManager().registerEvents(new RaceCheckpointListener(raceManager), this);
 
 
     }
