@@ -2,3 +2,22 @@ name: UCRacing1
 version: '${project.version}'
 main: UC.urbancraft.ucracing1.UCRacing1
 api-version: '1.21'
+
+
+commands:
+  startrace:
+    description: Start a race
+    usage: /startrace <race_name>
+  joinrace:
+    description: Join an active race
+    usage: /joinrace
+    setstartpoint:
+      description: Set the starting point of a race
+      usage: /setstartpoint <race_name>
+      setendpoint:
+        description: Set the endpoint of a race
+        usage: /setendpoint <race_name>
+      addcheckpoint:
+        description: Add a checkpoint to a race
+        usage: /addcheckpoint <race_name>
+

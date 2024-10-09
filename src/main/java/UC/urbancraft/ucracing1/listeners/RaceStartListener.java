@@ -11,9 +11,11 @@ import org.bukkit.entity.Player;
 public class RaceStartListener implements Listener {
 
     private final RaceManager raceManager;
+    private final RaceSession raceSession;
 
-    public RaceStartListener(RaceManager raceManager) {
+    public RaceStartListener(RaceManager raceManager, RaceSession raceSession) {
         this.raceManager = raceManager;
+        this.raceSession = raceSession;
     }
 
     @EventHandler

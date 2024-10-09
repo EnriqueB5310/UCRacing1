@@ -7,11 +7,15 @@ public final class UCRacing1 extends JavaPlugin {
 
     private RaceManager raceManager;
 
+
+
+
+
     @Override
     public void onEnable() {
       this.raceManager = new RaceManager();
     getServer().getPluginManager().registerEvents(new RaceCheckpointListener(raceManager), this);
-
+getServer().getPluginManager().registerEvents(new RaceCheckpointListener());
 
     }
 

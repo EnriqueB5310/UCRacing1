@@ -3,7 +3,8 @@ package UC.urbancraft.ucracing1;
 import UC.urbancraft.ucracing1.Util.RaceCheckpoint;
 import UC.urbancraft.ucracing1.Util.RaceStartPoints;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import org.bukkit.ChatColor
+
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
