@@ -1,6 +1,7 @@
 package UC.urbancraft.ucracing1;
 
 import UC.urbancraft.ucracing1.Util.RaceCheckpoint;
+import UC.urbancraft.ucracing1.Util.RaceStartOrder;
 import UC.urbancraft.ucracing1.Util.RaceStartPoints;
 import org.bukkit.Location;
 import java.time.Instant;
@@ -17,10 +18,10 @@ public class Race {
     private Location spawn;
     private List<RaceCheckpoint> checkpoints;
     private List<RaceStartPoints> startPoints;
-    private StartOrder startOrder;
+    private RaceStartOrder startOrder;
 
     // Constructor for creating a race manually
-    public Race(String name, int minPlayers, Location spawn, List<RaceCheckpoint> checkpoints, List<RaceStartPoints> startPoints, StartOrder startOrder) {
+    public Race(String name, int minPlayers) {
         this.id = UUID.randomUUID();
         this.createdAt = Instant.now();
         this.minPlayers = minPlayers;
@@ -32,7 +33,7 @@ public class Race {
     }
 
     // Constructor for loading race from MySQL
-    public Race(UUID id, Instant createdAt, int minPlayers, String name, Location spawn, List<RaceCheckpoint> checkpoints, List<RaceStartPoints> startPoints, StartOrder startOrder) {
+    public Race(UUID id, Instant createdAt, int minPlayers, String name, Location spawn, List<RaceCheckpoint> checkpoints, List<RaceStartPoints> startPoints, RaceStartOrder startOrder) {
         this.id = id;
         this.createdAt = createdAt;
         this.minPlayers = minPlayers;
@@ -84,11 +85,11 @@ public class Race {
         this.startPoints = startPoints;
     }
 
-    public StartOrder getStartOrder() {
+    public RaceStartOrder getStartOrder() {
         return startOrder;
     }
 
-    public void setStartOrder(StartOrder startOrder) {
+    public void setStartOrder(RaceStartOrder startOrder) {
         this.startOrder = startOrder;
     }
 
